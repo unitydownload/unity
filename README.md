@@ -1,2 +1,38 @@
 # unity
-unity download
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buy Game</title>
+</head>
+<body>
+
+<h2>Buy & Download Game</h2>
+
+<p>Scan QR para magbayad ng ₱20</p>
+<img src="mayaQR20.png" width="220">
+
+<h3>Enter payment code</h3>
+<input type="password" id="code">
+<button onclick="unlock()">Unlock</button>
+
+<div id="download" style="display:none;">
+<br>
+<a href="C:\Users\GEV\Desktop\unity.zip" download>
+<button>Download Game</button>
+</a>
+</div>
+
+<script>
+function unlock(){
+    let code = document.getElementById("code").value;
+
+    if(code === "20"){
+        document.getElementById("download").style.display="block";
+    } else {
+        alert("Wrong code");
+    }
+}
+</script>
+
+</body>
+</html>
